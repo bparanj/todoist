@@ -1,0 +1,15 @@
+<h1>New Project</h1>
+
+<%= form_for @project do |f| %>
+  <p>
+	Name: <%= f.text_field :name %>
+  </p>
+  <%= f.fields_for :tasks do |task_form| %>
+  	<p>
+  		Task: <%= task_form.text_field :name %>
+  	</p>
+  <% end %>
+  <p>
+	<%= f.submit 'Create Project' %>
+  </p>
+<% end %>
