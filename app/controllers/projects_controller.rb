@@ -8,11 +8,7 @@ class ProjectsController < ApplicationController
     3.times { @project.tasks.build }
   end
 
-  def create
-    logger.info "*" * 80
-    logger.info "#{allowed_params.inspect}"
-    logger.info "*" * 80
-        
+  def create        
     @project = Project.new(allowed_params)
 
     if @project.save

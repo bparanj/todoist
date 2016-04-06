@@ -4,3 +4,11 @@
 <%= project.name %>
 <% end %>
 
+<% @projects.each do |project| %>
+
+<% for task in project.tasks %>
+<%= task.name %>
+<% end %>
+
+<% end %>
+
