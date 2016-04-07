@@ -1,0 +1,17 @@
+<h1>Edit Project</h1>
+
+<%= form_for @project do |f| %>
+  <p>
+	Name: <%= f.text_field :name %>
+  </p>
+  <%= f.fields_for :tasks do |task_form| %>
+  	<p>
+  		Task: <%= task_form.text_field :name %>
+		<%= task_form.check_box :_destroy %>
+		<%= task_form.label :_destroy, "Remove Question" %>
+  	</p>
+  <% end %>
+  <p>
+	<%= f.submit 'Update Project' %>
+  </p>
+<% end %>

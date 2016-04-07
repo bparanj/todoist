@@ -2,13 +2,11 @@
 
 <% for project in @projects %>
 <%= project.name %>
-<% end %>
 
-<% @projects.each do |project| %>
-
-<% for task in project.tasks %>
-<%= task.name %>
-<% end %>
+	<% for task in project.tasks %>
+	<%= task.name %>
+	<% end %>
 
 <% end %>
+</br>
 
